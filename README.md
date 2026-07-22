@@ -52,6 +52,12 @@ Created for [autotools-language-server](https://github.com/Freed-Wu/autotools-la
 ### [rocks.nvim](https://github.com/lumen-oss/rocks.nvim)
 
 ```toml
+[treesitter]
+config = "autoconf"
+
+[treesitter.parser_map]
+auto_highlight = "all"
+
 [plugins]
 "rocks-treesitter.nvim" = "VERSION"
 tree-sitter-autoconf = "VERSION"
