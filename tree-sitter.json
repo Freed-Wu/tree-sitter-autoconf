@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "config",
+      "camelcase": "Config",
+      "title": "configure.ac",
+      "scope": "source.config",
+      "file-types": [
+        "config"
+      ],
+      "injection-regex": "^config$",
+      "class-name": "TreeSitterConfig"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "tree sitter grammar for autoconf",
+    "authors": [
+      {
+        "name": "Wu",
+        "email": "wuzhenyu@ustc.ed",
+        "url": "https://github.com/Freed-Wu"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Freed-Wu/tree-sitter-config",
+      "funding": "https://github.com/Freed-Wu/tree-sitter-config"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": true
+  }
+}

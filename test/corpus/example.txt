@@ -1,0 +1,53 @@
+==================
+shell
+==================
+if test x$gdbm != xno; then
+  AC_CHECK_HEADERS(gdbm.h)
+  AC_CHECK_LIB(gdbm, gdbm_open)
+fi
+
+---
+
+(file
+  (code)
+  (macro_call
+    (macro_name)
+    (argument_list
+      (code)))
+  (macro_call
+    (macro_name)
+    (argument_list
+      (code)
+      (code)))
+  (code))
+
+==================
+macro
+==================
+AC_CACHE_CHECK(if long is 64 bits, zsh_cv_long_is_64_bit,
+[AC_RUN_IFELSE([AC_LANG_SOURCE([[int main() { return sizeof(long) < 8; }]])],[zsh_cv_long_is_64_bit=yes],[zsh_cv_long_is_64_bit=no],[zsh_cv_long_is_64_bit=no])])
+
+---
+
+(file
+  (macro_call
+    (macro_name)
+    (argument_list
+      (code)
+      (code)
+      (m4_quoted
+        (macro_call
+          (macro_name)
+          (argument_list
+            (m4_quoted
+              (macro_call
+                (macro_name)
+                (argument_list
+                  (m4_quoted
+                    (code)))))
+            (m4_quoted
+              (code))
+            (m4_quoted
+              (code))
+            (m4_quoted
+              (code))))))))
