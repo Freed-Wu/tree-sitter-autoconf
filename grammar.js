@@ -4,7 +4,7 @@
  * A structural grammar for Autoconf's M4 input. Shell is deliberately kept
  * opaque: it is emitted as `code` rather than parsed as Bash.
  */
-module.exports = grammar({
+export default grammar({
   name: 'autoconf',
 
   extras: $ => [/\s/, /\\\r?\n/, $.comment, /\\( |\t|\v|\f)/],
