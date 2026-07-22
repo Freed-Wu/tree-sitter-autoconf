@@ -4,7 +4,7 @@
 
 with pkgs;
 mkShell {
-  name = "tree-sitter-config";
+  name = "tree-sitter-autoconf";
   buildInputs = [
     tree-sitter
     bun

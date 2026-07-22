@@ -9,7 +9,7 @@ package = '$package'
 if modrev:sub(1, 1) == '$' then
   modrev = "scm"
   specrev = "1"
-  repo_url = "https://github.com/Freed-Wu/tree-sitter-config"
+  repo_url = "https://github.com/Freed-Wu/tree-sitter-autoconf"
   package = repo_url:match("/([^/]+)/?$")
 end
 version = modrev ..'-'.. specrev
@@ -39,6 +39,6 @@ end
 
 build = {
   type = "treesitter-parser",
-  lang = "config",
+  lang = "autoconf",
   generate = true,
 }

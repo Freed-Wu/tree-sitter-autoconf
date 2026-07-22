@@ -127,7 +127,7 @@ jobs:
           extra_luarocks_args: |
             --force
           version: scm
-          template: tree-sitter-config-scm-1.rockspec
+          template: tree-sitter-autoconf-scm-1.rockspec
       - uses: lumen-oss/luarocks-tag-release@v7
         env:
           LUAROCKS_API_KEY: ${{secrets.LUAROCKS_API_KEY}}
@@ -135,10 +135,10 @@ jobs:
         with:
           extra_luarocks_args: |
             --force
-          template: tree-sitter-config-scm-1.rockspec
+          template: tree-sitter-autoconf-scm-1.rockspec
       - run: |
-          luarocks install tree-sitter-config
-          luarocks pack tree-sitter-config
+          luarocks install tree-sitter-autoconf
+          luarocks pack tree-sitter-autoconf
           scripts/upload.sh ./*.rock
         env:
           LUAROCKS_API_KEY: ${{secrets.LUAROCKS_API_KEY}}
@@ -156,8 +156,8 @@ jobs:
       - uses: leafo/gh-actions-luarocks@v6
       - run: |
           luarocks install tree-sitter-cli
-          luarocks install tree-sitter-config
-          luarocks pack tree-sitter-config
+          luarocks install tree-sitter-autoconf
+          luarocks pack tree-sitter-autoconf
           scripts/upload.sh ./*.rock
         env:
           LUAROCKS_API_KEY: ${{secrets.LUAROCKS_API_KEY}}
@@ -241,7 +241,7 @@ jobs:
       - uses: Freed-Wu/update-aur-package@v1.0.11
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          package_name: python-tree-sitter-config
+          package_name: python-tree-sitter-autoconf
           ssh_private_key: ${{secrets.AUR_SSH_PRIVATE_KEY}}
 
   deploy-nur:

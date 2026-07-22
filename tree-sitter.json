@@ -2,15 +2,15 @@
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
-      "name": "config",
-      "camelcase": "Config",
+      "name": "autoconf",
+      "camelcase": "autoconf",
       "title": "configure.ac",
-      "scope": "source.config",
+      "scope": "source.autoconf",
       "file-types": [
-        "config"
+        "autoconf"
       ],
-      "injection-regex": "^config$",
-      "class-name": "TreeSitterConfig"
+      "injection-regex": "^autoconf$",
+      "class-name": "TreeSitterAutoconf"
     }
   ],
   "metadata": {
@@ -25,8 +25,8 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/Freed-Wu/tree-sitter-config",
-      "funding": "https://github.com/Freed-Wu/tree-sitter-config"
+      "repository": "https://github.com/Freed-Wu/tree-sitter-autoconf",
+      "funding": "https://github.com/Freed-Wu/tree-sitter-autoconf"
     }
   },
   "bindings": {

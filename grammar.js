@@ -5,7 +5,7 @@
  * opaque: it is emitted as `code` rather than parsed as Bash.
  */
 module.exports = grammar({
-  name: 'config',
+  name: 'autoconf',
 
   extras: $ => [/\s/, /\\\r?\n/, $.comment, /\\( |\t|\v|\f)/],
 
