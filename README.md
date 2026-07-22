@@ -53,10 +53,10 @@ Created for [autotools-language-server](https://github.com/Freed-Wu/autotools-la
 
 ```toml
 [treesitter]
-config = "autoconf"
+auto_highlight = "all"
 
 [treesitter.parser_map]
-auto_highlight = "all"
+config = "autoconf"
 
 [plugins]
 "rocks-treesitter.nvim" = "VERSION"
