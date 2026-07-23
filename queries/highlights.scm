@@ -4,7 +4,10 @@
 (bare_macro
   name: (macro_name) @constant.macro)
 
-(comment) @comment @spell
+(comment) @comment
+
+(comment
+  (body) @spell)
 
 (code) @string
 

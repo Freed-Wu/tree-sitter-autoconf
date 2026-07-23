@@ -1,4 +1,5 @@
-((comment) @injection.content
+(comment
+  (body) @injection.content
   (#set! injection.language "comment"))
 
 ((file
