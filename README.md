@@ -55,9 +55,6 @@ Created for [autotools-language-server](https://github.com/Freed-Wu/autotools-la
 [treesitter]
 auto_highlight = "all"
 
-[treesitter.parser_map]
-config = "autoconf"
-
 [plugins]
 "rocks-treesitter.nvim" = "VERSION"
 tree-sitter-autoconf = "VERSION"
