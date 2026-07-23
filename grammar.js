@@ -21,7 +21,7 @@ export default grammar({
     ),
 
     // `dnl` removes the rest of its input line before M4 expansion.
-    comment: $ => prec(2, seq('dnl', alias(/[^\n]*/, $.body))),
+    comment: $ => prec(2, seq('dnl', /\s+/, alias(/[^\n]*/, $.body))),
 
     macro_call: $ => prec(1, prec.right(seq(
       field('name', $.macro_name),
